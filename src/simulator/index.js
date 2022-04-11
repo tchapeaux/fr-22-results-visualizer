@@ -11,7 +11,7 @@ import {
   soutienCandidatE1,
   soutienCandidatE2,
 } from "../graph/data";
-import { barChartOptions } from "../graph/options";
+import { getOptions } from "../graph/options";
 import { deepCopy } from "../utils";
 
 import * as S from "./styles";
@@ -141,7 +141,7 @@ export default function Simulator() {
         ],
       },
       options: {
-        ...barChartOptions,
+        ...getOptions(),
         plugins: {
           title: {
             display: true,

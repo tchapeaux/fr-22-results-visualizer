@@ -13,11 +13,7 @@ import {
   dataGuessTour2,
   dataEmpty,
 } from "./data";
-import {
-  barChartOptions,
-  labelsOptionsDesktop,
-  labelsOptionsMobile,
-} from "./options";
+import { getOptions } from "./options";
 
 Chart.register(...registerables);
 
@@ -55,7 +51,7 @@ export default function Graph({ slide }) {
     const config = {
       type: "bar",
       data: deepCopy(dataEmpty),
-      options: barChartOptions,
+      options: getOptions(),
     };
 
     myChart.current = new Chart(ctx, config);
@@ -83,15 +79,12 @@ export default function Graph({ slide }) {
       inPlaceReplace(c.data, dataGuessTour2);
     }
 
-    console.log(myChart.current.data);
-
     myChart.current.update();
   }, [slide]);
 
   useLayoutEffect(() => {
     if (myChart.current) {
-      myChart.current.config.options.plugins.legend.labels =
-        window.innerWidth < 1000 ? labelsOptionsMobile : labelsOptionsDesktop;
+      myChart.current.config.options = getOptions();
       myChart.current.update();
     }
   });
