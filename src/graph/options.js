@@ -13,10 +13,10 @@ export const labelsOptionsMobile = {
         strokeStyle: style.borderColor,
         lineWidth: style.borderWidth,
         hidden: !chart.getDataVisibility(idx),
-        index: idx
+        index: idx,
       };
     });
-  }
+  },
 };
 
 export const barChartOptions = {
@@ -25,27 +25,27 @@ export const barChartOptions = {
   plugins: {
     title: {
       display: false,
-      text: "Election results"
+      text: "Election results",
     },
     subtitle: {
       display: true,
-      text: "⚠️ Résultats incomplets à 21h"
+      text: "⚠️ Résultats incomplets (97% voix)",
     },
     legend: {
       display: true,
       labels:
-        window.innerWidth < 700 ? labelsOptionsMobile : labelsOptionsDesktop
-    }
+        window.innerWidth < 700 ? labelsOptionsMobile : labelsOptionsDesktop,
+    },
   },
   responsive: true,
   scales: {
     x: {
       stacked: true,
       max: 55000000,
-      title: { display: true, text: "Voix" }
+      title: { display: true, text: "Voix" },
     },
     y: {
-      stacked: true
-    }
-  }
+      stacked: true,
+    },
+  },
 };

@@ -9,7 +9,7 @@ import {
   candidatE1,
   candidatE2,
   soutienCandidatE1,
-  soutienCandidatE2
+  soutienCandidatE2,
 } from "../graph/data";
 import { barChartOptions } from "../graph/options";
 import { deepCopy } from "../utils";
@@ -30,7 +30,7 @@ const labelsForTour2 = [
   "Non-Inscrit·es",
   "Non-Votant·es 2è tour",
   candidatE1,
-  candidatE2
+  candidatE2,
 ];
 
 function getDataFromPercentage(originalData, percent1, percent2) {
@@ -63,21 +63,21 @@ const candidatEs = referenceData.datasets
 
 function getInitialValue(cand) {
   if (cand === candidatE1) {
-    return { "1": 95, "2": 2 };
+    return { 1: 95, 2: 2 };
   }
   if (cand === candidatE2) {
-    return { "1": 2, "2": 95 };
+    return { 1: 2, 2: 95 };
   }
   if (soutienCandidatE1.includes(cand)) {
-    return { "1": 70, "2": 20 };
+    return { 1: 70, 2: 20 };
   }
   if (soutienCandidatE2.includes(cand)) {
-    return { "1": 20, "2": 70 };
+    return { 1: 20, 2: 70 };
   }
   if (cand === "Non-votant·es 1er tour") {
-    return { "1": 10, "2": 10 };
+    return { 1: 10, 2: 10 };
   }
-  return { "1": 30, "2": 30 };
+  return { 1: 30, 2: 30 };
 }
 
 // Check if an intitial value was provided
@@ -136,24 +136,24 @@ export default function Simulator() {
                 ds.data,
                 voteSplitValues[ds.label]["1"],
                 voteSplitValues[ds.label]["2"]
-              )
-            }))
-        ]
+              ),
+            })),
+        ],
       },
       options: {
         ...barChartOptions,
         plugins: {
           title: {
             display: true,
-            text: "Simulation du 2è tour -- ⚠️ Résultats provisoires"
+            text: "Simulation du 2è tour -- ⚠️ Résultats provisoires (97% voix)",
           },
           subtitle: {
             display: true,
             color: "#9b870c",
-            text: "Victoire de Emmanuel Macron"
-          }
-        }
-      }
+            text: "Victoire de Emmanuel Macron",
+          },
+        },
+      },
     };
 
     myChart.current = new Chart(ctx, config);
