@@ -48,7 +48,9 @@ export function getOptions() {
         callbacks: {
           afterLabel: (context) => {
             console.log(context);
-            const value = context.dataset.data || "";
+            const value = Array.isArray(context.dataset.data)
+              ? context.dataset.data.find((d) => d > 0)
+              : context.dataset.data || "";
             const roundedValue =
               100 * percentRound2(value / totalElectoralBody);
             return `(${String(roundedValue).substring(0, 5)}%)`;
