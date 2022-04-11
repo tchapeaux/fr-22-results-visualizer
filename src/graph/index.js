@@ -82,12 +82,5 @@ export default function Graph({ slide }) {
     myChart.current.update();
   }, [slide]);
 
-  useLayoutEffect(() => {
-    if (myChart.current) {
-      myChart.current.config.options = getOptions();
-      myChart.current.update();
-    }
-  });
-
   return <S.GraphCanvas key="graph" id="graph"></S.GraphCanvas>;
 }

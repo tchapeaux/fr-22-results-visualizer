@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Chart, registerables } from "chart.js";
 import LZString from "lz-string";
 
@@ -122,6 +122,8 @@ export default function Simulator() {
 
     const initData = deepCopy(referenceData);
 
+    const options = getOptions();
+
     const config = {
       type: "bar",
       data: {
@@ -141,12 +143,9 @@ export default function Simulator() {
         ],
       },
       options: {
-        ...getOptions(),
+        ...options,
         plugins: {
-          title: {
-            display: true,
-            text: "Simulation du 2è tour",
-          },
+          ...options.plugins,
           subtitle: {
             display: true,
             color: "#9b870c",
@@ -204,36 +203,42 @@ export default function Simulator() {
   }
 
   return (
-    <S.Wrapper>
-      <S.Controls>
-        <p>
-          Configurez les report de voix
-          <br />
-          entre le premier et deuxième tour.
-        </p>
-        <S.ControlsScrollable>
-          {candidatEs
-            .filter((_, idx) => (showAllRanges ? true : idx <= 4))
-            .map((c) => (
-              <VoteSplitRange
-                candidatE={c}
-                key={c}
-                onChange={onChange.bind(null, c)}
-                value={voteSplitValues[c]}
-              />
-            ))}
-        </S.ControlsScrollable>
-        <S.ControlsButton onClick={() => setShowAllRanges(!showAllRanges)}>
-          {showAllRanges ? "Cacher les <5%" : "Afficher tout"}
-        </S.ControlsButton>
-        <S.ControlsButton onClick={resetValues}>Réinitialiser</S.ControlsButton>
-        <S.ControlsButton onClick={share}>
-          {hasCopiedShare
-            ? "Copié dans le presse-papier"
-            : "Partager votre simulation"}
-        </S.ControlsButton>
-      </S.Controls>
-      <canvas key="simulator-graph" id="simulator-graph" />
-    </S.Wrapper>
+    <>
+      <S.Title>Simulation du deuxième tour</S.Title>
+      <S.Wrapper>
+        <canvas key="simulator-graph" id="simulator-graph" />
+
+        <S.Controls>
+          <p>
+            Configurez les report de voix
+            <br />
+            entre le premier et deuxième tour.
+          </p>
+          <S.ControlsScrollable>
+            {candidatEs
+              .filter((_, idx) => (showAllRanges ? true : idx <= 4))
+              .map((c) => (
+                <VoteSplitRange
+                  candidatE={c}
+                  key={c}
+                  onChange={onChange.bind(null, c)}
+                  value={voteSplitValues[c]}
+                />
+              ))}
+          </S.ControlsScrollable>
+          <S.ControlsButton onClick={() => setShowAllRanges(!showAllRanges)}>
+            {showAllRanges ? "Cacher les <5%" : "Afficher tout"}
+          </S.ControlsButton>
+          <S.ControlsButton onClick={resetValues}>
+            Réinitialiser
+          </S.ControlsButton>
+          <S.ControlsButton onClick={share}>
+            {hasCopiedShare
+              ? "Copié dans le presse-papier"
+              : "Partager votre simulation"}
+          </S.ControlsButton>
+        </S.Controls>
+      </S.Wrapper>
+    </>
   );
 }
