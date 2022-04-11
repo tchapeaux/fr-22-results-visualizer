@@ -4,7 +4,7 @@ export const rawData = [
     shortName: "NI",
     bgcolor: "#999999",
     group: "Non-Votant·es",
-    tour1: 6543424,
+    tour1: 5107384,
     tour2: 15,
   },
   {
@@ -12,7 +12,7 @@ export const rawData = [
     shortName: "NV",
     bgcolor: "#cccccc",
     group: "Non-Votant·es",
-    tour1: 12668193,
+    tour1: 13604796,
     tour2: 30,
   },
   {
@@ -20,7 +20,7 @@ export const rawData = [
     shortName: "NA",
     bgcolor: "orangered",
     group: "Gauche",
-    tour1: 195893,
+    tour1: 197184,
     tour2: 0,
   },
   {
@@ -28,7 +28,7 @@ export const rawData = [
     shortName: "PP",
     bgcolor: "tomato",
     group: "Gauche",
-    tour1: 265826,
+    tour1: 268984,
     tour2: 0,
   },
   {
@@ -36,7 +36,7 @@ export const rawData = [
     shortName: "FR",
     bgcolor: "mediumorchid",
     group: "Gauche",
-    tour1: 799352,
+    tour1: 802615,
     tour2: 0,
   },
   {
@@ -44,7 +44,7 @@ export const rawData = [
     shortName: "JLM",
     bgcolor: "#cc2443",
     group: "Gauche",
-    tour1: 7605492,
+    tour1: 7714949,
     tour2: 0,
   },
   {
@@ -52,7 +52,7 @@ export const rawData = [
     shortName: "AH",
     bgcolor: "#FF8080",
     group: "Gauche",
-    tour1: 604202,
+    tour1: 616651,
     tour2: 0,
   },
   {
@@ -60,7 +60,7 @@ export const rawData = [
     shortName: "YJ",
     bgcolor: "#00c000",
     group: "Gauche",
-    tour1: 1587541,
+    tour1: 1628337,
     tour2: 0,
   },
   {
@@ -68,7 +68,7 @@ export const rawData = [
     shortName: "EM",
     bgcolor: "#ffeb00",
     group: "Gouvernement",
-    tour1: 9560579,
+    tour1: 9785578,
     tour2: 55,
   },
   {
@@ -76,7 +76,7 @@ export const rawData = [
     shortName: "VP",
     bgcolor: "#0066CC",
     group: "Droite",
-    tour1: 1658376,
+    tour1: 1679470,
     tour2: 0,
   },
   {
@@ -84,7 +84,7 @@ export const rawData = [
     shortName: "JL",
     bgcolor: "#26c4ec",
     group: "Droite",
-    tour1: 1095702,
+    tour1: 1101690,
     tour2: 0,
   },
   {
@@ -92,7 +92,7 @@ export const rawData = [
     shortName: "NDA",
     bgcolor: "#0082C4",
     group: "Droite",
-    tour1: 718244,
+    tour1: 725356,
     tour2: 0,
   },
   {
@@ -100,7 +100,7 @@ export const rawData = [
     shortName: "MLP",
     bgcolor: "#0D378A",
     group: "Droite",
-    tour1: 8109802,
+    tour1: 8136369,
     tour2: 45,
   },
   {
@@ -108,10 +108,10 @@ export const rawData = [
     shortName: "EZ",
     bgcolor: "midnightblue",
     group: "Droite",
-    tour1: 2442672,
+    tour1: 2485935,
     tour2: 0,
   },
-];
+].map((row) => ({ ...row, tour1: row.tour1 / 1000000 }));
 
 export const totalElectoralBody = rawData.reduce(
   (prev, cur) => prev + cur.tour1,

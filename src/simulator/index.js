@@ -145,7 +145,7 @@ export default function Simulator() {
         plugins: {
           title: {
             display: true,
-            text: "Simulation du 2è tour -- ⚠️ Résultats provisoires (97% voix)",
+            text: "Simulation du 2è tour",
           },
           subtitle: {
             display: true,

@@ -37,23 +37,25 @@ export function getOptions() {
         display: false,
         text: "Résultats du 1er tour",
       },
-      subtitle: {
-        display: true,
-        text: "⚠️ Résultats incomplets (97% voix)",
-      },
       legend: {
         display: true,
+        labels: {
+          boxWidth: 10,
+        },
       },
       tooltip: {
         callbacks: {
-          afterLabel: (context) => {
-            console.log(context);
+          label: (context) => {
             const value = Array.isArray(context.dataset.data)
               ? context.dataset.data.find((d) => d > 0)
               : context.dataset.data || "";
+
             const roundedValue =
               100 * percentRound2(value / totalElectoralBody);
-            return `(${String(roundedValue).substring(0, 5)}%)`;
+
+            return `${context.dataset.label}: ${(
+              value * 1000000
+            ).toLocaleString()} (${String(roundedValue).substring(0, 5)}%)`;
           },
         },
       },
@@ -62,8 +64,8 @@ export function getOptions() {
     scales: {
       x: {
         stacked: true,
-        max: 55000000,
-        title: { display: true, text: "Voix" },
+        max: 55,
+        title: { display: true, text: "Voix (millions)" },
       },
       y: {
         stacked: true,
