@@ -113,6 +113,11 @@ export const rawData = [
   },
 ];
 
+export const totalElectoralBody = rawData.reduce(
+  (prev, cur) => prev + cur.tour1,
+  0
+);
+
 function randomOpacity() {
   const allowedHex = "3456789abcdef";
   const d1 = allowedHex[Math.floor(Math.random() * allowedHex.length)];

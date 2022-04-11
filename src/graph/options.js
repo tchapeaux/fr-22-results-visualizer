@@ -1,3 +1,9 @@
+import { totalElectoralBody } from "./data";
+
+function percentRound2(value) {
+  return Math.round(value * 10000) / 10000;
+}
+
 function makeMobile(options) {
   options.plugins.legend.labels = {
     font: { size: "10" },
@@ -37,6 +43,17 @@ export function getOptions() {
       },
       legend: {
         display: true,
+      },
+      tooltip: {
+        callbacks: {
+          afterLabel: (context) => {
+            console.log(context);
+            const value = context.dataset.data || "";
+            const roundedValue =
+              100 * percentRound2(value / totalElectoralBody);
+            return `(${String(roundedValue).substring(0, 5)}%)`;
+          },
+        },
       },
     },
     responsive: true,
