@@ -23,12 +23,20 @@ export default [
 
     <p>Mise en perspective des résultats</p>
 
+    <S.Note>⏱️ Temps de lecture: 5 minutes</S.Note>
+
     <p>
       Faites défiler pour commencer
       <br />⏬
     </p>
 
-    <S.Note>⏱️ Temps de lecture: 5 minutes</S.Note>
+    <S.Note>
+      Ou allez directement au{" "}
+      <a href="/simulator" target="_blank" rel="noreferrer">
+        simulateur de second tour
+      </a>
+      .
+    </S.Note>
   </Slide>,
   <Slide>
     <p>
@@ -36,18 +44,21 @@ export default [
       présidentielle.
     </p>
     <p>Nous allons observer ses résultats sous différents angles.</p>
-    {/*<S.Note>
+    <S.Note>
       Les pourcentages présentés ici prennent en compte l'entierté du corps
-      électoral, ils peuvent donc différer des résultats officiels qui masquent
-      l'abstention, le vote blanc ou nul, et les personnes non inscrites.
-    </S.Note>*/}
+      électoral, ils diffèrent donc des résultats officiels qui se basent
+      seulement sur les voix exprimées.
+    </S.Note>
   </Slide>,
   <Slide>
-    <p>Un premier zoom sur l'abstention:</p>
+    <p>
+      Le point d'attention principal est l'abstention massive lors de cette
+      élection.
+    </p>
     <p>54M de Français·es majeur·es avaient la possibilité de voter.</p>
     <p>
-      Cependant, une part non négligeable n'a pas voté pour un·e des douze
-      candidat·es, ou ne s'est même pas inscrit·es sur les listes électorales.
+      Cependant, une grande partie ne s'est pas inscrit·es sur les listes
+      électorales, ou n'a pas voté pour un·e des douze candidat·es.
     </p>
 
     {/*<S.Note>
@@ -75,24 +86,23 @@ export default [
   </Slide>,
   <Slide>
     <p>
-      En considérant les voix obtenues par l'opposition, il faut nuancer en
-      précisant qu'elle n'est pas un bloc uniforme.
+      En considérant les voix obtenues par l'opposition, il faut nuancer car
+      elle n'est pas un bloc uniforme.
     </p>
     <p>
-      Chaque candidat·e se revendique d'une position unique, mais pour
-      simplifier la lecture nous les séparons ici selon leur orientation sur
-      l'axe gauche-droite par rapport au président sortant.
+      On peut séparer les oppositions selon plusieurs critères, mais pour rester
+      simple ici, nous les séparons selon leur orientation sur l'axe
+      gauche-droite par rapport au président sortant.
     </p>
   </Slide>,
   <Slide>
     <p>
       À l'issue du premier tour, les deux candidat·es avec le plus grand nombre
-      de voix ont été sélectionné·es pour le second tour, qui se déroulera deux
-      semaines après le premier.
+      de voix sont sélectionné·es pour le second tour.
     </p>
     <p>
-      On observe ici que la division dans un même bloc réduit les chances de
-      victoire d'un·e orientation politique.
+      On observe ici comment la division dans un même bloc peut réduire les
+      chances de victoire d'un·e orientation politique.
     </p>
   </Slide>,
   <Slide>
@@ -122,22 +132,26 @@ export default [
     </p>
 
     <S.Note>
-      Envie d'explorer les différents scénarios ? Joue avec les chiffres dans le{" "}
+      Envie d'explorer les différents scénarios sur base des reports de voix ?
+      Jouez avec les chiffres dans le{" "}
       <a href="/simulator" target="_blank" rel="noreferrer">
-        simulateur de second tour.
+        simulateur de second tour
       </a>
+      .
     </S.Note>
   </Slide>,
   <Slide>
-    <p>Merci pour votre attention !</p>
     <S.Note>
-      Consulter les{" "}
+      J'espère que cette mise en perspective des chiffres vous a plu.
+    </S.Note>
+    <S.Note>
+      Consultez{" "}
       <a
         href="https://docs.google.com/spreadsheets/d/1cnfWoX2vZbWeYwLIiKC5MJJeFgGYCl2Uv_FGey4M9Os/edit?usp=sharing"
         target="_blank"
         rel="noreferrer"
       >
-        données brutes et sources
+        les données brutes et les sources
       </a>
       .
     </S.Note>
@@ -146,18 +160,25 @@ export default [
       Conception et réalisation par{" "}
       <a href="https://github.com/tchapeaux" target="_blank" rel="noreferrer">
         tchap
-      </a>{" "}
-      (
+      </a>
+      .
+      <br />
+      Conseils UX par Banjopalmo.
+    </S.Note>
+    <S.Note>
+      Consultez le{" "}
       <a
         href="https://codesandbox.io/s/22-presidential-results-slideshow-b0ihgb"
         target="_blank"
         rel="noreferrer"
       >
         code source
+      </a>{" "}
+      ou envoyez-moi un{" "}
+      <a href="https://twitter.com/bafaltom" target="_blank" rel="noreferrer">
+        tweet
       </a>
-      ).
-      <br />
-      Conseils UX par Banjopalmo.
+      .
     </S.Note>
     <S.Note>
       Figures réalisées avec{" "}
