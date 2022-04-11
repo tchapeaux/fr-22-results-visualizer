@@ -102,7 +102,7 @@ export default [
     </p>
     <p>
       On observe ici comment la division dans un même bloc peut réduire les
-      chances de victoire d'un·e orientation politique.
+      chances de victoire d'une orientation politique.
     </p>
   </Slide>,
   <Slide>
