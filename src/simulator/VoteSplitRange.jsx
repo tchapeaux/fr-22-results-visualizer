@@ -21,14 +21,14 @@ export default function VoteSplitRange({ candidatE, onChange, value }) {
         min={MIN}
         max={MAX}
         onChange={(values) =>
-          onChange({ "1": Number(values[0]), "2": MAX - Number(values[1]) })
+          onChange({ 1: Number(values[0]), 2: MAX - Number(values[1]) })
         }
         renderTrack={({ props, children }) => (
           <S.RangeTrack
             onMouseDown={props.onMouseDown}
             onTouchStart={props.onTouchStart}
             style={{
-              ...props.style
+              ...props.style,
             }}
           >
             {value["1"]}%
@@ -42,9 +42,9 @@ export default function VoteSplitRange({ candidatE, onChange, value }) {
                   values: [value["1"], MAX - value["2"]],
                   colors: [COLOR_1, "#ccc", COLOR_2],
                   min: MIN,
-                  max: MAX
+                  max: MAX,
                 }),
-                alignSelf: "center"
+                alignSelf: "center",
               }}
             >
               {children}
@@ -64,14 +64,14 @@ export default function VoteSplitRange({ candidatE, onChange, value }) {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              boxShadow: "0px 2px 6px #AAA"
+              boxShadow: "0px 2px 6px #AAA",
             }}
           >
             <div
               style={{
                 height: "16px",
                 width: "5px",
-                backgroundColor: isDragged ? "#548BF4" : "#333"
+                backgroundColor: isDragged ? "#548BF4" : "#333",
               }}
             />
           </div>

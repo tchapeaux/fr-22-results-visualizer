@@ -30,7 +30,7 @@ export default function App() {
               React.cloneElement(s, {
                 containerRef: SlideZoneRef,
                 key: idx,
-                onVisibilityChange: onSlideVisibilityChange.bind(null, idx)
+                onVisibilityChange: onSlideVisibilityChange.bind(null, idx),
               })
             )}
           </S.SlideZone>

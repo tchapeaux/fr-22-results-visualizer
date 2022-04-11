@@ -11,12 +11,12 @@ import {
   dataTour1Winners,
   dataHappyVoters,
   dataGuessTour2,
-  dataEmpty
+  dataEmpty,
 } from "./data";
 import {
   barChartOptions,
   labelsOptionsDesktop,
-  labelsOptionsMobile
+  labelsOptionsMobile,
 } from "./options";
 
 Chart.register(...registerables);
@@ -55,7 +55,7 @@ export default function Graph({ slide }) {
     const config = {
       type: "bar",
       data: deepCopy(dataEmpty),
-      options: barChartOptions
+      options: barChartOptions,
     };
 
     myChart.current = new Chart(ctx, config);

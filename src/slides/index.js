@@ -180,5 +180,5 @@ export default [
       </a>
       ).
     </S.Note>
-  </Slide>
+  </Slide>,
 ];
