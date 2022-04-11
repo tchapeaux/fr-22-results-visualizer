@@ -168,7 +168,7 @@ export default [
     <S.Note>
       Consultez le{" "}
       <a
-        href="https://codesandbox.io/s/22-presidential-results-slideshow-b0ihgb"
+        href="https://github.com/tchapeaux/fr-22-results-visualizer"
         target="_blank"
         rel="noreferrer"
       >
