@@ -12,10 +12,14 @@ export const GraphZone = styled.div`
   height: 50vh;
   background-color: white;
 
+  border-bottom: 2px solid lightgray;
+
   @media screen and (min-width: 700px) {
     left: 40vw;
     width: 50vw;
     height: 100vh;
+
+    border-bottom: 2px solid transparent;
   }
 
   display: flex;
