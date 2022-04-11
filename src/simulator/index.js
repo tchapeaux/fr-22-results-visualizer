@@ -213,7 +213,7 @@ export default function Simulator() {
         </p>
         <S.ControlsScrollable>
           {candidatEs
-            .filter((_, idx) => (showAllRanges ? true : idx <= 5))
+            .filter((_, idx) => (showAllRanges ? true : idx <= 4))
             .map((c) => (
               <VoteSplitRange
                 candidatE={c}
