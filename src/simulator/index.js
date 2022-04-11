@@ -209,7 +209,7 @@ export default function Simulator() {
         <p>
           Configurez les report de voix
           <br />
-          entre le premier et second tour.
+          entre le premier et deuxième tour.
         </p>
         <S.ControlsScrollable>
           {candidatEs

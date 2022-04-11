@@ -33,7 +33,7 @@ export default [
     <S.Note>
       Ou allez directement au{" "}
       <a href="/simulator" target="_blank" rel="noreferrer">
-        simulateur de second tour
+        simulateur de deuxième tour
       </a>
       .
     </S.Note>
@@ -98,7 +98,7 @@ export default [
   <Slide>
     <p>
       À l'issue du premier tour, les deux candidat·es avec le plus grand nombre
-      de voix sont sélectionné·es pour le second tour.
+      de voix sont sélectionné·es pour le deuxième tour.
     </p>
     <p>
       On observe ici comment la division dans un même bloc peut réduire les
@@ -106,14 +106,14 @@ export default [
     </p>
   </Slide>,
   <Slide>
-    <p>Observons maintenant le point de départ pour le second tour.</p>
+    <p>Observons maintenant le point de départ pour le deuxième tour.</p>
     <p>
       La plupart des électeur·rices n'ont pas voté pour un·e des candidat·es
-      qualifié·es. Ce sont à elles et eux de décider l'issue du second tour.
+      qualifié·es. Ce sont à elles et eux de décider l'issue du scrutin.
     </p>
     <p>
-      Elles et ils peuvent soit donner leur voix du second tour à un·e
-      candidat·e restant·e, soit ne pas aller voter.
+      Elles et ils peuvent maintenant soit donner leur voix à un·e candidat·e
+      restant·e, soit ne pas aller voter.
     </p>
 
     <S.Note>
@@ -124,7 +124,7 @@ export default [
   <Slide>
     <p>
       Parmis les candidat·es éliminé·es, certain·es ont exprimé des consignes de
-      votes pour leurs électeur·rices au second tour.
+      votes pour leurs électeur·rices au deuxième tour.
     </p>
     <p>
       On montre ici la situation sur base de ces consignes de votes, que chaque
@@ -135,7 +135,7 @@ export default [
       Envie d'explorer les différents scénarios sur base des reports de voix ?
       Jouez avec les chiffres dans le{" "}
       <a href="/simulator" target="_blank" rel="noreferrer">
-        simulateur de second tour
+        simulateur de deuxième tour
       </a>
       .
     </S.Note>
